@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProntaPrint - Photo to Shirt in 30 Seconds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 20px;
+            margin: 40px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .logo {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .coming-soon {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+        }
+        
+        .features {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .features h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .steps {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .steps h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .step-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .step {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+        
+        .step-number {
+            background: white;
+            color: #667eea;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .pricing {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .pricing h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .price {
+            font-size: 3em;
+            color: #4CAF50;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .price-note {
+            color: white;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .footer {
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 40px 0;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        .contact {
+            color: white;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 2.5em;
+            }
+            
+            .tagline {
+                font-size: 1.2em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">ProntaPrint</h1>
+            <p class="tagline">Photo to Shirt in 30 Seconds</p>
+            <div class="coming-soon">Coming Soon to App Store</div>
+        </div>
+        
+        <div class="features">
+            <h2>Revolutionary Custom Apparel</h2>
+            <div class="feature-list">
+                <div class="feature">
+                    <div class="feature-icon">📸</div>
+                    <h3>Take Any Photo</h3>
+                    <p>Pets, family, art, anything you love</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Magic</h3>
+                    <p>Automatic background removal</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👕</div>
+                    <h3>Instant Preview</h3>
+                    <p>See your design on a real t-shirt</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Fast Delivery</h3>
+                    <p>High-quality shirts shipped to you</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="steps">
+            <h2>How It Works</h2>
+            <div class="step-list">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>Snap Photo</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>Remove Background</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>See Mockup</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <p>Order</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pricing">
+            <h2>Simple Pricing</h2>
+            <div class="price">$25</div>
+            <p class="price-note">Per custom t-shirt • Free shipping on 2+ shirts</p>
+        </div>
+        
+        <div class="footer">
+            <p>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact</a>
+            </p>
+            <div class="contact">
+                <p>Contact: hello@prontaprint.app</p>
+                <p>© 2025 ProntaPrint. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple Privacy Policy Modal (Hidden by default) -->
+    <div id="privacy" style="display: none;">
+        <h2>Privacy Policy</h2>
+        <p>ProntaPrint respects your privacy. We collect only the information necessary to provide our service:</p>
+        <ul>
+            <li>Photos you choose to upload for t-shirt creation</li>
+            <li>Order and shipping information</li>
+            <li>Payment information (processed securely by Apple Pay/Google Pay)</li>
+        </ul>
+        <p>We do not sell or share your personal information with third parties except as necessary to fulfill your orders.</p>
+    </div>
+
+    <div id="terms" style="display: none;">
+        <h2>Terms of Service</h2>
+        <p>By using ProntaPrint, you agree to:</p>
+        <ul>
+            <li>Only upload photos you own or have permission to use</li>
+            <li>Not upload inappropriate, offensive, or copyrighted content</li>
+            <li>Pay for orders placed through the app</li>
+        </ul>
+        <p>ProntaPrint reserves the right to refuse service for inappropriate content.</p>
+    </div>
+
+    <script>
+        // Simple navigation for legal pages
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('href').substring(1);
+                    if (target === 'contact') {
+                        window.location.href = 'mailto:hello@prontaprint.app';
+                    } else {
+                        alert('Legal pages coming soon! For now, contact hello@prontaprint.app for any questions.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
